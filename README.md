@@ -17,7 +17,7 @@ class EchoActionHandler extends ActionHandler {
   }
 }
 
-WsServer.listen(8080).then((server) => {
+WsServer.start().then((server) => {
   server.registerActionHandler(EchoActionHandler)
 })
 ```
@@ -27,7 +27,7 @@ WsServer.listen(8080).then((server) => {
 ```js
 const { WsClient } = require('wskit')
 
-WsClient.connect().then((client) => {
+WsClient.start().then((client) => {
   client.action('echo', { message: 'Hello World' }).then((response) => {
     console.log(response.params.message) // returns 'ECHO Hello world'
   })
