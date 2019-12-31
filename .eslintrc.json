@@ -1,0 +1,23 @@
+{
+    "plugins": ["node"],
+    "extends": ["eslint:recommended", "plugin:node/recommended", "airbnb-base"],
+    "rules": {
+        "class-methods-use-this": "off",
+        "node/exports-style": ["error", "exports", { "allowBatchAssign": true }],
+        "no-console": "off",
+        "arrow-body-style": "off",
+        "indent": ["error", 2],
+        "max-len": ["error", 300],
+        "no-extra-semi": "error",
+        "semi": ["error", "never"],
+        "comma-dangle": ["error", "never"],
+        "func-names": "off",
+        "object-curly-newline": "off",
+        "no-restricted-syntax": "off",
+        "newline-per-chained-call": "off",
+        "no-param-reassign": "off",
+        "no-control-regex": "off",
+        "node/no-unpublished-require": "off",
+        "import/no-extraneous-dependencies": "off"
+    }
+}
